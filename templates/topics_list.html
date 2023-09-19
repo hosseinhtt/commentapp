@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Topics{% endblock %}
+
+{% block body %}
+
+    <h1>Topics List</h1>
+    <hr>
+    {% if user.is_authenticated %}
+        <a href="{% url 'topic_create' %}" class="btn btn-primary">Add Topic</a>
+    {% endif %}
+
+    <ul>
+        {% for topic in topics %}
+            <li>
+                <a href="{% url 'topic_detail' topic.id %}">{{ topic.title }}</a>
+                <p>{{ topic.description }}</p>
+            </li>
+        {% empty %}
+            <li>No topics available.</li>
+        {% endfor %}
+    </ul>
+
+    {% endblock %}
+
