@@ -50,6 +50,8 @@ a:hover {
     margin-bottom: 80px; /* Adjust the value as needed */
 }
 
+
+
 /* Add space below the footer */
 .footer {
     position: fixed;
@@ -100,3 +102,12 @@ a:hover {
     /* Adjust styles for smaller screens here if needed */
 }
 
+.form-container button a {
+    color: inherit; /* Inherit the text color from the parent container */
+    text-decoration: none; /* Remove underlines */
+}
+
+/* Hover effect for the "Back to Topics List" button (optional) */
+.form-container button a:hover {
+    /* Add any hover styles if needed, but you mentioned you want no change */
+}
