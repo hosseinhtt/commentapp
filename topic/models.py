@@ -14,4 +14,8 @@ class Comment(models.Model):
     text = models.TextField()
 
     def __str__(self):
-        return f"Comment by {self.user.username} on {self.topic.title}"
+        if len(self.text) < 50 :
+            return f"Comment by {self.user.username} on {self.topic.title}: {self.text}"
+        else:
+            return f"Comment by {self.user.username} on {self.topic.title}: {self.text[:50]}"
+
