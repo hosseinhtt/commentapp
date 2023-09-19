@@ -110,4 +110,6 @@ a:hover {
 /* Hover effect for the "Back to Topics List" button (optional) */
 .form-container button a:hover {
     /* Add any hover styles if needed, but you mentioned you want no change */
+    background-color: #0056b3;
 }
+

@@ -14,7 +14,13 @@ from .forms import *
 
 class CustomLoginView(LoginView):
     template_name = 'login.html'  # Create a login template
-
+    success_url = reverse_lazy('topics_list')  # Specify the success URL
+    
+    def form_valid(self, form):
+        # Perform the login and redirect to the success URL
+        response = super().form_valid(form)
+        return response
+    
 class CustomLogoutView(LogoutView):
     pass  # You can customize the logout view if needed
 
